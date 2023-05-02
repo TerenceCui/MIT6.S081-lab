@@ -42,7 +42,7 @@ barrier()
     // imcrement on round count
     bstate.round++;
     // wake up all other threads
-    pthread_cond_broadcast(&bstate.barrier_cond);
+    pthread_cond_broadcast(&bstate.barrier_cond); //wake up at the last time
   }
   pthread_mutex_unlock(&bstate.barrier_mutex);
 }
